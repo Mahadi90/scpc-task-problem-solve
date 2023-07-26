@@ -29,3 +29,30 @@ function sumOfPositiveNumbers(numbers) {
 // console.log(sumOfPositiveNumbers(inputArray)); 
 
 
+// Task 3: Write a JavaScript program to find the most frequent element in an array and return it. 
+
+const arr = [2, 3, 1, 3, 2, 3, 4, 5, 5, 5];
+
+function findMostFrequentElement(arr) {
+    const frequencyMap = {};
+    let maxFrequency = 0;
+    let mostFrequentElement;
+  
+    for (const element of arr) {
+      if (!frequencyMap[element]) {
+        frequencyMap[element] = 1;
+      } else {
+        frequencyMap[element]++;
+      }
+  
+      if (frequencyMap[element] > maxFrequency) {
+        maxFrequency = frequencyMap[element];
+        mostFrequentElement = element;
+      }
+    }
+  
+    return mostFrequentElement;
+  }
+
+
+// console.log(findMostFrequentElement(arr));
